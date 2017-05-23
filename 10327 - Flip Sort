@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+	//freopen("input.txt", "r", stdin);
+	//freopen("output.txt", "w", stdout);
+	int arr[1005],T,count=0,i,j;
+
+	while(scanf("%d",&T) == 1){
+		for(i=0 ; i < T ; i++)
+			scanf("%d",&arr[i]);
+			
+	    for(i=1 ; i < T ; i++){
+	        for(j=0 ; j < i ; j++){
+				if (arr[j] > arr[i])
+					count++;
+			}
+	            
+	    }
+	    printf("Minimum exchange operations : %d\n",count);
+	    count = 0;
+	    
+	}
+	return 0;
+}
